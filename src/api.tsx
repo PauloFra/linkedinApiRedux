@@ -1,7 +1,6 @@
 import axios from "axios";
-import { create } from "domain";
 
 export default axios.create({
-    baseURL:'https://api.linkedin.com'
+    baseURL:'https://api.linkedin.com/v2/me'
     }
 )

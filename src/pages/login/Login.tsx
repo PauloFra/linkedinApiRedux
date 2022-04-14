@@ -1,35 +1,21 @@
-import { setgroups, setuid } from 'process'
+import {connect} from 'react-redux'
 import {useEffect} from 'react'
 import api from '../../api'
-import axios from 'axios';
-function Login() {
+import { AuthLogin } from '../../store/actions/AuthAction'
+function Login(auth: any) {
   
-async function setup() {
-   
-   try{
-    const values = {
-      grant_type:"client_credentials",
-      client_id:"782lqkjjev09jc",
-      client_secret:"HokZAQuRL1fuQMGT"
-
-    }
-        const {data} = await api.post('/oauth/v2/accessToken' , values)
-        console.log(data);
-    }
-    catch(error){
-      console.log(error);
-      
-    }
-    
-  }
-
-useEffect(()=>{
-  setup()
-},[])
+  const {dispatch} = auth;
 
   return (
-    <div>Login</div>
+    <div>
+      <button type='button' onClick={() => AuthLogin(dispatch)}>Logar</button>
+    </div>
   )
 }
 
-export default Login
+const mapStateToProps = (state:any) => ({
+  auth: state.authReducer.auth
+});
+
+
+export default connect(mapStateToProps)(Login)

@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
     auth:{
-        token:''
+        token:'',
+        auth: false
     }
 }
 
@@ -9,7 +10,8 @@ function authReducer(state = INITIAL_STATE , action:any) {
         return {
             ...state,
             auth:{
-                token:action.token
+                token: action.token,
+                auth: action.auth
             }
         }
     }
