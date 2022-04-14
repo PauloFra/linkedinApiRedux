@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    padding: 5px 300px;
+    justify-content:space-around;
+    align-items: center;
+}
+.header li{
+    display: inline;
+    padding:0 10px;
+}
+.header a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.userPicName{
+    display: flex;
+    align-items: center;
+    font-size: 13px;   
+    padding: 0 20px; 
+    border-left: 1px solid #F4F4F4;
+    border-right: 1px solid #F4F4F4; 
+}
+.infos{
+    margin-left: 10px;
+    margin-right:100px;
+    width: 200px;
+    line-height: 20px;
+}
+.divDoInput {
+    padding:0 10px;
+
+}
+.divDoInput input{
+    border: none;
+    padding: 10px 0;
+    color: rgb(133, 133, 255);
+    font-size: 20px;
+    font-family: Roboto;
+}
+.borderToNav{
+    border-left: 1px solid #F4F4F4;
+    border-right: 1px solid #F4F4F4;
+    padding:  15px 20px;
+}
